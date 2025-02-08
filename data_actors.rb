@@ -3,7 +3,7 @@ new_actor["name"] = "Christian Bale"
 new_actor.save
 
 new_actor = Actor.new #2
-new_actor["name"] = "Micheal Caine"
+new_actor["name"] = "Michael Caine"
 new_actor.save
 
 new_actor = Actor.new #3
