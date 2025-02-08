@@ -91,6 +91,17 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+warner = Studio.find_by({"studio_name" => "Warner Bros."})
+movies_list = Movie.where({"studio_id" => warner["id"]})
+
+for movie in movies_list
+    movie_name = movie["movie_title"]
+    year = movie["year_released"]
+    rating = movie["mpaa_rating"]
+    studio = warner["studio_name"]
+
+    puts "#{movie_name} | #{year} | #{rating} | #{studio}"
+end
 
 # Prints a header for the cast output
 puts ""

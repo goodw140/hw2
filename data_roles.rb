@@ -1,12 +1,4 @@
-# create_table "roles", force: :cascade do |t|
-#     t.string "character_name"
-#     t.integer "movie_id"
-#     t.integer "actor_id"
-#     t.datetime "created_at", null: false
-#     t.datetime "updated_at", null: false
-#   end
-
-
+Role.destroy_all
 
 batmanbegins = Movie.find_by({"movie_title" => "Batman Begins"})
 thedarknight = Movie.find_by({"movie_title" => "The Dark Knight"})

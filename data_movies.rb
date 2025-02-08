@@ -1,3 +1,5 @@
+Movie.destroy_all
+
 warner = Studio.find_by({"studio_name" => "Warner Bros."})
 
 new_movie = Movie.new

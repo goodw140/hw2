@@ -1,3 +1,6 @@
+Actor.destroy_all
+
+# Batman Beings
 new_actor = Actor.new #1
 new_actor["name"] = "Christian Bale"
 new_actor.save
@@ -18,6 +21,7 @@ new_actor = Actor.new #5
 new_actor["name"] = "Gary Oldman"
 new_actor.save
 
+# The Dark Knight
 new_actor = Actor.new #6
 new_actor["name"] = "Heath Ledger"
 new_actor.save
@@ -30,6 +34,7 @@ new_actor = Actor.new #8
 new_actor["name"] = "Maggie Gyllenhaal"
 new_actor.save
 
+# The Dark Knight Rises
 new_actor = Actor.new #9
 new_actor["name"] = "Tom Hardy"
 new_actor.save
