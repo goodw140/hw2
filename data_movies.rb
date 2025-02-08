@@ -1,4 +1,4 @@
-warner = Studio.find_by({"name" => "Warner Bros."})
+warner = Studio.find_by({"studio_name" => "Warner Bros."})
 
 new_movie = Movie.new
 new_movie["movie_title"] = "Batman Begins"
