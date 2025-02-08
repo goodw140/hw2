@@ -8,9 +8,9 @@
 
 
 
-batmanbegins = Movie.find_by({"name" => "Batman Begins"})
-thedarknight = Movie.find_by({"name" => "The Dark Knight"})
-thedarknightrises = Movie.find_by({"name" => "The Dark Knight Rises"})
+batmanbegins = Movie.find_by({"movie_title" => "Batman Begins"})
+thedarknight = Movie.find_by({"movie_title" => "The Dark Knight"})
+thedarknightrises = Movie.find_by({"movie_title" => "The Dark Knight Rises"})
 cbale = Actor.find_by({"name" => "Christian Bale"})
 mcaine = Actor.find_by({"name" => "Michael Caine"})
 lneeson = Actor.find_by({"name" => "Liam Neeson"})
