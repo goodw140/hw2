@@ -111,3 +111,37 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+
+
+# First try - simple code that works, but is duplicative
+# bb = Movie.find_by({"movie_title" => "Batman Begins"})
+# tdk = Movie.find_by({"movie_title" => "The Dark Knight"})
+# tdkr = Movie.find_by({"movie_title" => "The Dark Knight Rises"})
+
+# bb_roles = Role.where({"movie_id" => bb["id"]})
+# tdk_roles = Role.where({"movie_id" => tdk["id"]})
+# tdkr_roles = Role.where({"movie_id" => tdkr["id"]})
+
+# for roles in bb_roles
+#     actor = Actor.find_by({"id" => roles["actor_id"]})
+#     puts "#{bb["movie_title"]}  |   #{actor["name"]}    |   #{roles["character_name"]}"
+# end
+# for roles in tdk_roles
+#     actor = Actor.find_by({"id" => roles["actor_id"]})
+#     puts "#{tdk["movie_title"]}  |   #{actor["name"]}    |   #{roles["character_name"]}"
+# end
+# for roles in tdkr_roles
+#     actor = Actor.find_by({"id" => roles["actor_id"]})
+#     puts "#{tdkr["movie_title"]}  |   #{actor["name"]}    |   #{roles["character_name"]}"
+# end
+
+# Attempt 2 - combining loops
+movies = Movie.all
+
+for movie in movies
+    roles = Role.where({"movie_id" => movie["id"]})
+    for role in roles
+        actor = Actor.find_by({"id" => role["actor_id"]})
+        puts "#{movie["movie_title"]}   |   #{actor["name"]}    |   #{role["character_name"]}"
+    end
+end
